@@ -1,0 +1,92 @@
+0 verbose cli [
+0 verbose cli   '/usr/bin/node',
+0 verbose cli   '/usr/share/nodejs/npm/bin/npm-cli.js',
+0 verbose cli   'exec',
+0 verbose cli   '--',
+0 verbose cli   'run',
+0 verbose cli   'build'
+0 verbose cli ]
+1 info using npm@8.5.1
+2 info using node@v12.22.9
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 6ms
+5 timing config:load:file:/usr/share/nodejs/npm/npmrc Completed in 13ms
+6 timing config:load:builtin Completed in 13ms
+7 timing config:load:cli Completed in 9ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:project Completed in 1ms
+10 timing config:load:file:/root/.npmrc Completed in 0ms
+11 timing config:load:user Completed in 1ms
+12 timing config:load:file:/etc/npmrc Completed in 0ms
+13 timing config:load:global Completed in 0ms
+14 timing config:load:validate Completed in 1ms
+15 timing config:load:credentials Completed in 2ms
+16 timing config:load:setEnvs Completed in 1ms
+17 timing config:load Completed in 35ms
+18 timing npm:load:configload Completed in 35ms
+19 timing npm:load:setTitle Completed in 1ms
+20 timing config:load:flatten Completed in 3ms
+21 timing npm:load:display Completed in 4ms
+22 verbose logfile /root/.npm/_logs/2024-02-07T23_42_56_198Z-debug-0.log
+23 timing npm:load:logFile Completed in 6ms
+24 timing npm:load:timers Completed in 1ms
+25 timing npm:load:configScope Completed in 0ms
+26 timing npm:load Completed in 48ms
+27 http fetch GET 200 https://registry.npmjs.org/run 88ms (cache miss)
+28 timing arborist:ctor Completed in 1ms
+29 timing arborist:ctor Completed in 0ms
+30 warn exec The following package was not found and will be installed: run
+31 timing arborist:ctor Completed in 1ms
+32 timing idealTree:init Completed in 5ms
+33 timing idealTree:userRequests Completed in 1ms
+34 silly idealTree buildDeps
+35 silly fetch manifest run@*
+36 http fetch GET 200 https://registry.npmjs.org/run 32ms (cache miss)
+37 silly placeDep ROOT run@1.5.0 OK for:  want: *
+38 silly fetch manifest minimatch@*
+39 http fetch GET 200 https://registry.npmjs.org/minimatch 33ms (cache miss)
+40 timing idealTree:#root Completed in 75ms
+41 silly placeDep ROOT minimatch@9.0.3 OK for: run@1.5.0 want: *
+42 silly fetch manifest brace-expansion@^2.0.1
+43 http fetch GET 200 https://registry.npmjs.org/brace-expansion 44ms (cache miss)
+44 timing idealTree:node_modules/run Completed in 49ms
+45 silly placeDep ROOT brace-expansion@2.0.1 OK for: minimatch@9.0.3 want: ^2.0.1
+46 silly fetch manifest balanced-match@^1.0.0
+47 http fetch GET 200 https://registry.npmjs.org/balanced-match 29ms (cache miss)
+48 timing idealTree:node_modules/minimatch Completed in 33ms
+49 silly placeDep ROOT balanced-match@1.0.2 OK for: brace-expansion@2.0.1 want: ^1.0.0
+50 timing idealTree:node_modules/brace-expansion Completed in 11ms
+51 timing idealTree:node_modules/balanced-match Completed in 0ms
+52 timing idealTree:buildDeps Completed in 171ms
+53 timing idealTree:fixDepFlags Completed in 0ms
+54 timing idealTree Completed in 179ms
+55 timing command:exec Completed in 304ms
+56 verbose stack Error: Unsupported engine
+56 verbose stack     at checkEngine (/usr/share/nodejs/npm/node_modules/npm-install-checks/index.js:15:25)
+56 verbose stack     at c (/usr/share/nodejs/@npmcli/arborist/lib/arborist/build-ideal-tree.js:243:7)
+56 verbose stack     at Arborist.[checkEngine] (/usr/share/nodejs/@npmcli/arborist/lib/arborist/build-ideal-tree.js:246:7)
+56 verbose stack     at Arborist.[checkEngineAndPlatform] (/usr/share/nodejs/@npmcli/arborist/lib/arborist/build-ideal-tree.js:230:27)
+56 verbose stack     at Arborist.buildIdealTree (/usr/share/nodejs/@npmcli/arborist/lib/arborist/build-ideal-tree.js:218:42)
+56 verbose stack     at async Promise.all (index 1)
+56 verbose stack     at async Arborist.reify (/usr/share/nodejs/@npmcli/arborist/lib/arborist/reify.js:152:5)
+56 verbose stack     at async exec (/usr/share/nodejs/npm/node_modules/libnpmexec/lib/index.js:181:7)
+56 verbose stack     at async module.exports (/usr/share/nodejs/npm/lib/cli.js:66:5)
+57 verbose pkgid minimatch@9.0.3
+58 verbose cwd /root
+59 verbose Linux 5.15.0-92-generic
+60 verbose argv "/usr/bin/node" "/usr/share/nodejs/npm/bin/npm-cli.js" "exec" "--" "run" "build"
+61 verbose node v12.22.9
+62 verbose npm  v8.5.1
+63 error code EBADENGINE
+64 error engine Unsupported engine
+65 error engine Not compatible with your version of node/npm: minimatch@9.0.3
+66 error notsup Not compatible with your version of node/npm: minimatch@9.0.3
+66 error notsup Required: {"node":">=16 || 14 >=14.17"}
+66 error notsup Actual:   {"npm":"8.5.1","node":"v12.22.9"}
+67 verbose exit 1
+68 timing npm Completed in 751ms
+69 verbose unfinished npm timer reify 1707349376754
+70 verbose unfinished npm timer reify:loadTrees 1707349376755
+71 verbose code 1
+72 error A complete log of this run can be found in:
+72 error     /root/.npm/_logs/2024-02-07T23_42_56_198Z-debug-0.log
